@@ -7,7 +7,7 @@
 <title>confirmId</title>
 </head>
 <body>
-	id : ${id } <br>
+	id : ${studentid } <br>
 	pw : ${pw }
 </body>
 </html>
