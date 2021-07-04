@@ -23,4 +23,8 @@
 	<update id="updateDao">
 		update userinfo2 set name = #{param1}, telno = #{param2}, address = #{param3}, email = #{param4}, relation = #{param5} where seqno = #{param6}
 	</update>
+	
+	<select id="listQuery" resultType="com.springlec.basespringmybatis02.dto.BDto">
+		SELECT * FROM USERINFO2 WHERE ${param1} LIKE CONCAT('%', #{param2}, '%') 
+	</select>
 </mapper>

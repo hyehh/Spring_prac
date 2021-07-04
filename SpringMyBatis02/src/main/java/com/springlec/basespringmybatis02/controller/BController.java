@@ -65,5 +65,11 @@ public class BController {
 		return "addressbook/view";
 	}
 	
+	@RequestMapping("listQuery")
+	public String listQuery(HttpServletRequest request, Model model) {
+		BDao dao = sqlSession.getMapper(BDao.class);
+		model.addAttribute("list", dao.listQuery(request.getParameter("query"), request.getParameter("content")));
+		return "addressbook/list";
+	}
 	
 }
