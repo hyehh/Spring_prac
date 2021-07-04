@@ -22,7 +22,7 @@ public class BDao {
 		this.template = Constant.template;
 	}
 	
-	public ArrayList<BDto> select() {
+	public ArrayList<BDto> list() {
 		String query = "select * from board";
 		return (ArrayList<BDto>) template.query(query, new BeanPropertyRowMapper<BDto>(BDto.class));
 	}

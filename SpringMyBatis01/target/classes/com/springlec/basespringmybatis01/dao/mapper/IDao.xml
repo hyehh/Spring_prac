@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.springlec.basespringmybatis01.dao.IDao">
+	<select id="listDao" resultType="com.springlec.basespringmybatis01.dto.ContentDto">
+		SELECT * FROM BOARD ORDER BY MID DESC;
+	</select>
+	
+	<insert id="writeDao">
+		INSERT INTO BOARD (MWRITER, MCONTENT) VALUES (#{param1}, #{param2});
+	</insert>
+	
+	<delete id="deleteDao">
+		DELETE FROM BOARD WHERE MID = #{parma1}
+	</delete>
+</mapper>
